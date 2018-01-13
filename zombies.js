@@ -234,7 +234,7 @@ equip(itemToEquip){
  */
 eat(itemToEat){
   let index = this.getPack().indexOf(itemToEat);
-  if(this.getPack().includes(itemToEat) && itemToEat instanceof Food && index !== -1){
+  if(itemToEat instanceof Food && index !== -1){
     this.discardItem(itemToEat);
     this.health += itemToEat.energy;
     if(this.health > this._maxHealth){
